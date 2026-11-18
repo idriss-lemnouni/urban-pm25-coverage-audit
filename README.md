@@ -8,6 +8,27 @@ The 2023 archive contained **847,162** EPA rows. After selecting the daily AQS a
 
 The downloadable local report allows filtering by county, state and AQS ID. The artifact folder includes annual and monthly CSVs, paired event sensitivity, a SQLite database and a machine-readable run report. [Run evidence](reports/2023-summary.json)
 
+## Visual Results Gallery
+
+![Annual coverage by band](figures/results/annual-coverage.png)
+
+87 regions had measurements on fewer than half of calendar days.
+
+![Monthly coverage by reporting region](figures/results/monthly-coverage.png)
+
+The boxes summarize the regional distribution for each month.
+
+![Paired exceptional-event sensitivity](figures/results/event-sensitivity.png)
+
+The largest regional changes include regions with only one matched pair. Pair counts are annotated.
+
+Recreate the gallery from the reports or run outputs listed below.
+
+```sh
+python -m pip install -r requirements-visuals.txt
+python plot_results.py
+```
+
 ## Data and method
 
 EPA AirData parameter 88101, 2023 daily aggregate release. The selected summaries use the label `PM25 24-hour 2012`, measured in µg/m³ at local conditions. [Source and cleaning](data/README.md)
@@ -27,7 +48,7 @@ An AQS instrument is a site plus a POC for the fixed pollutant. The SQL collapse
 
 ## Installation and reproduction
 
-Use Python 3.11 or newer with the bundled SQLite module. This project has no third-party dependencies.
+Use Python 3.11 or newer with the bundled SQLite module. The core audit uses the standard library.
 
 ```sh
 python audit.py fetch --year 2023 --archive data/raw/daily_88101_2023.zip --sha256 4b40502e8147419643a1120c666c4aa952633094f21f65475844172bcc78833b
