@@ -1,0 +1,24 @@
+{
+  "year": 2023,
+  "days": 365,
+  "source_url": "https://aqs.epa.gov/aqsweb/airdata/daily_88101_2023.zip",
+  "local_archive_bytes": 9919616,
+  "sha256": "4b40502e8147419643a1120c666c4aa952633094f21f65475844172bcc78833b",
+  "standard": "PM25 24-hour 2012",
+  "counts": {
+    "county_days": 201525,
+    "monitor_days": 452388,
+    "out_of_scope_aggregation": 394635,
+    "site_days": 306422,
+    "source_rows": 847162,
+    "staged_rows": 452527
+  },
+  "regions": 636,
+  "regions_with_daily_coverage": 636,
+  "fully_observed_regions": 144,
+  "regions_below_half_coverage": 87,
+  "matched_event_pairs": 139,
+  "changed_event_pairs": 131,
+  "weighted_mean_absolute_event_delta": 6.312,
+  "runtime_seconds": 54.514
+}
